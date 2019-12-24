@@ -1,0 +1,9 @@
+mergeMethod: squash
+deleteBranchAfterMerge: true
+minApprovals:
+  COLLABORATOR: 1
+updateBranch: true
+mergeCommitMessage: |
+  {title} (#{number})
+  {body}
+reportStatus: true
