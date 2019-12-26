@@ -33,7 +33,7 @@ double average(int m, ...)
     return sum1 / m;
 }
 
-char func(int num, ...)
+void func(int num, ...)
 {
     va_list valist2;
     const char *ch = "";
@@ -45,7 +45,7 @@ char func(int num, ...)
         printf("%d: %s", i, ch);
     }
     printf("\n");
-    
+
     va_end(valist2);
 }
 
