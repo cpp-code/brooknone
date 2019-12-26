@@ -10,4 +10,4 @@ distcheck:
 	@echo
 
 clean:
-	@rm -vf regular-expression
+	@rm -vf variable-arguments
