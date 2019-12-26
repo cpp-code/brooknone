@@ -1,7 +1,7 @@
-all: regular-expression
+all: variable-arguments
 
-regular-expression: regular-expression.cc
-	g++ -o $@ $^ -Wall -Werror
+regular-expression: variable-arguments.c
+	gcc -o $@ $^ -Wall -Werror
 
 check:
 	@echo
@@ -10,4 +10,4 @@ distcheck:
 	@echo
 
 clean:
-	@rm -vf regular-expression
+	@rm -vf variable-arguments
