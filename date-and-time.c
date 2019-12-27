@@ -3,7 +3,7 @@
 #include <time.h>
 #include <unistd.h>
 
-int cstm()
+void cstm()
 {
     struct tm custime;
     custime.tm_sec = 11;
@@ -17,7 +17,7 @@ int cstm()
     printf("One day is: %s", asctime(&custime));
 }
 
-int Stopwatch()
+void Stopwatch()
 {
     clock_t start, finish;
     double total = 0.0;
@@ -31,14 +31,14 @@ int Stopwatch()
     printf("CPU用时 %f 秒\n", total);
 }
 
-int rightnow()
+void rightnow()
 {
     time_t now;
     time(&now);
     printf("Now: %s", ctime(&now));
 }
 
-int diftm()
+void diftm()
 {
     time_t begin, end;
     double diff = 0.0;
@@ -58,6 +58,11 @@ int main()
     Stopwatch();
     rightnow();
     diftm();
+
+    time_t a_t = time(NULL);
+    struct tm *a_time;
+    a_time = localtime(&a_t);
+    printf("Now:%s", asctime(a_time));
 
     return 0;
 }

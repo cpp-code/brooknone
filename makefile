@@ -1,7 +1,15 @@
-all: date-and-time
+all: regular-expression variable-arguments date-and-time
 
-regular-expression: date-and-time.c
-	gcc -o $@ $^ -Wall -Werror
+CFLAG = -Wall -Werror
+
+regular-expression: regular-expression.cc
+	g++ -o $@ $^ $(CFLAG)
+
+variable-arguments: variable-arguments
+	gcc -o $@ $^ $(CFLAG)
+
+date-and-time: date-and-time.c
+	gcc -o $@ $^ $(CFLAG)
 
 check:
 	@echo
@@ -10,4 +18,4 @@ distcheck:
 	@echo
 
 clean:
-	@rm -vf date-and-time
+	@rm -vf regular-expression variable-arguments date-and-time
