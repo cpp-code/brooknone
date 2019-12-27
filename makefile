@@ -5,7 +5,7 @@ CFLAG = -Wall -Werror
 regular-expression: regular-expression.cc
 	g++ -o $@ $^ $(CFLAG)
 
-variable-arguments: variable-arguments
+variable-arguments: variable-arguments.c
 	gcc -o $@ $^ $(CFLAG)
 
 date-and-time: date-and-time.c
