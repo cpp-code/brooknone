@@ -1,6 +1,6 @@
-all: variable-arguments
+all: date-and-time
 
-regular-expression: variable-arguments.c
+regular-expression: date-and-time.c
 	gcc -o $@ $^ -Wall -Werror
 
 check:
@@ -10,4 +10,4 @@ distcheck:
 	@echo
 
 clean:
-	@rm -vf variable-arguments
+	@rm -vf date-and-time
