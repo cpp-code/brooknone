@@ -12,11 +12,12 @@ int main()
     double diff = 0.0;
     
     time(&start);
-    printf("启动： %s", ctime(&start));
     sleep(4);
     time(&end);
-    printf("启动成功： %s", ctime(&end));
     diff = difftime(end, start);
+    
+    printf("启动： %s", ctime(&start));
+    printf("启动成功： %s", ctime(&end));
     printf("启动用时： %f\n", diff);
 
     time_t a_t = time(NULL);
