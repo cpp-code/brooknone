@@ -4,20 +4,18 @@
 
 int main()
 {
-    time_t now, start, end;
+    time_t now, end;
     double diff = 0.0;
     time_t a_t = time(NULL);
     struct tm *a_time;
 
     time(&now);
-    time(&start);
     
-    printf("Now: %s", ctime(&now));
-    printf("启动： %s", ctime(&start));    
+    printf("Now: %s, 启动", ctime(&now));
     
     sleep(4);
     time(&end);
-    diff = difftime(end, start);
+    diff = difftime(end, now);
     a_time = localtime(&a_t);
     
     printf("启动成功： %s", ctime(&end));
